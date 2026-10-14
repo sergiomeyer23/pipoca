@@ -1,0 +1,36 @@
+{
+	"name": "pipoca",
+	"version": "0.2.0",
+	"private": true,
+	"type": "module",
+	"description": "Pipoca - um bot de WhatsApp com personalidade, inspirado na arquitetura da Monra.",
+	"main": "src/index.js",
+	"engines": {
+		"node": ">=18"
+	},
+	"scripts": {
+		"start": "node src/index.js",
+		"dev": "node --watch src/index.js",
+		"smoke": "node scripts/smoke.js",
+		"prompt": "node scripts/show-prompt.js",
+		"test:pipeline": "node --import ./scripts/loader.register.mjs scripts/pipeline.test.mjs",
+		"test:router": "node --import ./scripts/loader.register.mjs scripts/router.test.mjs",
+		"test": "npm run smoke && npm run test:pipeline && npm run test:router"
+	},
+	"keywords": [
+		"whatsapp",
+		"whatsapp-web.js",
+		"bot",
+		"llm",
+		"pipoca"
+	],
+	"license": "GPL-3.0",
+	"dependencies": {
+		"colors": "^1.4.0",
+		"dotenv": "^16.4.5",
+		"moment-timezone": "^0.5.45",
+		"openai": "^4.67.3",
+		"qrcode": "^1.5.4",
+		"whatsapp-web.js": "^1.34.1"
+	}
+}

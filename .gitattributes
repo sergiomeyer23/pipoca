@@ -1,0 +1,23 @@
+# Normaliza fim de linha: LF no repositorio, independente do sistema.
+# Sem isto, clonar no Windows e commitar marca todos os arquivos como
+# modificados, porque o git converte CRLF <-> LF.
+* text=auto eol=lf
+
+# Binarios: o git nao deve tentar tratar como texto.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.zip binary
+*.exe binary
+
+# Lockfile: gerado, nao aparece em diffs de revisao.
+package-lock.json linguist-generated=true -diff
+
+# Linguagens para o GitHub colorir a barra do repositorio.
+*.js linguist-language=JavaScript
+*.mjs linguist-language=JavaScript
+*.py linguist-language=Python
+*.svg linguist-language=SVG

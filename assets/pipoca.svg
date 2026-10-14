@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Pipoca, a capivara">
+  <title>Pipoca, a capivara</title>
+  <desc>Mascote vetorial plano: capivara marrom-clara sentada, debochada, fundo creme.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F7F1E3"/>
+      <stop offset="100%" stop-color="#F1E7D3"/>
+    </linearGradient>
+    <clipPath id="recorte">
+      <circle cx="512" cy="512" r="512"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#recorte)">
+    <rect width="1024" height="1024" fill="url(#bg)"/>
+    <ellipse cx="512" cy="880" rx="360" ry="52" fill="#E4D6BC"/>
+
+    <!-- corpo -->
+    <ellipse cx="512" cy="676" rx="286" ry="222" fill="#8A6240"/>
+
+    <!-- patinhas -->
+    <ellipse cx="398" cy="852" rx="62" ry="34" fill="#7A5537"/>
+    <ellipse cx="626" cy="852" rx="62" ry="34" fill="#7A5537"/>
+
+    <!-- orelhas -->
+    <circle cx="356" cy="428" r="40" fill="#7A5537"/>
+    <circle cx="356" cy="428" r="20" fill="#5E4128" opacity="0.5"/>
+    <circle cx="668" cy="428" r="40" fill="#7A5537"/>
+    <circle cx="668" cy="428" r="20" fill="#5E4128" opacity="0.5"/>
+
+    <!-- cabeca: larga e achatada, a marca da capivara -->
+    <rect x="302" y="372" width="420" height="354" rx="165" fill="#966B4A"/>
+
+    <!-- focinho claro, integrado ao queixo -->
+    <ellipse cx="512" cy="646" rx="128" ry="84" fill="#C0986A"/>
+
+    <!-- narinas -->
+    <ellipse cx="470" cy="632" rx="14" ry="10" fill="#4A3524"/>
+    <ellipse cx="554" cy="632" rx="14" ry="10" fill="#4A3524"/>
+
+    <!-- sobrancelhas: uma reta, uma levantada -->
+    <rect x="392" y="500" width="74" height="11" rx="5" fill="#5E4128"/>
+    <rect x="558" y="481" width="74" height="11" rx="5" fill="#5E4128"
+          transform="rotate(-13 595 487)"/>
+
+    <!-- olhos sonolentos, bem espacados -->
+    <circle cx="428" cy="552" r="19" fill="#2B2B2B"/>
+    <circle cx="596" cy="552" r="19" fill="#2B2B2B"/>
+    <circle cx="435" cy="545" r="7" fill="#FFFFFF" opacity="0.85"/>
+    <circle cx="603" cy="545" r="7" fill="#FFFFFF" opacity="0.85"/>
+
+    <!-- sorriso de canto -->
+    <path d="M478 688 Q512 700 552 684" fill="none" stroke="#4A3524"
+          stroke-width="12" stroke-linecap="round"/>
+
+    <!-- pipocas: a piada do apelido -->
+    <g fill="#F5C842">
+      <circle cx="126" cy="186" r="24"/>
+      <circle cx="172" cy="146" r="19"/>
+      <circle cx="188" cy="204" r="15"/>
+      <circle cx="892" cy="170" r="22"/>
+      <circle cx="934" cy="216" r="15"/>
+      <circle cx="852" cy="222" r="13"/>
+    </g>
+    <g fill="#D9A82E" opacity="0.75">
+      <circle cx="152" cy="170" r="8"/>
+      <circle cx="914" cy="192" r="7"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+node_modules/
+.env
+.env.local
+
+# Sessao do WhatsApp (NUNCA versionar: contem suas credenciais)
+.wwebjs_auth/
+.wwebjs_cache/
+session/
+*.session
+
+# Saidas e temporarios
+tmp/
+out/
+*.log
+npm-debug.log*
+
+# Editor / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
