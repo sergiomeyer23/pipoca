@@ -59,6 +59,18 @@ const callModel = async (model, { systemPrompt, messages }) => {
 };
 
 /**
+ * Marca o erro como "esperado" (chave invalida, modelo inexistente,
+ * rede fora). O terminal de chat usa isso para mostrar so a mensagem,
+ * sem um stack trace que assusta e nao ajuda.
+ */
+const expected = (error, message) => {
+	const wrapped = new Error(message);
+	wrapped.expected = true;
+	wrapped.cause = error;
+	return wrapped;
+};
+
+/**
  * Gera uma resposta. Se o MODEL principal falhar, tenta o
  * FALLBACK_MODEL (mesma ideia da Monra, mas com erro mais claro).
  */
@@ -74,7 +86,7 @@ export const generateReply = async ({ systemPrompt, messages }) => {
 		logger.warn(`modelo "${primary}" falhou: ${error.message}`);
 
 		if (!fallback || fallback === primary) {
-			throw new Error(`Falha ao gerar resposta com "${primary}": ${error.message}`);
+			throw expected(error, `Falha ao gerar resposta com "${primary}": ${error.message}`);
 		}
 
 		try {
@@ -83,7 +95,8 @@ export const generateReply = async ({ systemPrompt, messages }) => {
 			logger.info(`fallback "${fallback}" respondeu.`);
 			return result;
 		} catch (fallbackError) {
-			throw new Error(
+			throw expected(
+				fallbackError,
 				`"${primary}" falhou (${error.message}) e o fallback "${fallback}" tambem (${fallbackError.message}).`
 			);
 		}

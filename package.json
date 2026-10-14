@@ -13,6 +13,7 @@
 		"dev": "node --watch src/index.js",
 		"smoke": "node scripts/smoke.js",
 		"prompt": "node scripts/show-prompt.js",
+		"chat": "node scripts/chat.js",
 		"test:pipeline": "node --import ./scripts/loader.register.mjs scripts/pipeline.test.mjs",
 		"test:router": "node --import ./scripts/loader.register.mjs scripts/router.test.mjs",
 		"test": "npm run smoke && npm run test:pipeline && npm run test:router"
